@@ -64,16 +64,16 @@ trains and tunes the model using grid search. Then saves the model as pickle fil
 Web app test example
 
 ![Web app](images/app_input_message.png)
-![Web app](images/Results.png)
+![Results](images/Results.png)
 
 The second screenshot shows Genre Proportions:
-![Web app](images/Genre.png)
+![Genre](images/Genre.png)
 
 The third screenshot shows Message Proportion vs Categories:
-![Web app](images/Proportion Message Categories.png)
+![Profortions](images/Proportion_Categories.png)
 
 The fourth screenshot shows number of realted messages vs not related messages:
-![Web app](images/related.png)
+![related](images/related.png)
 
 
 ## Acknowledgements<a name="licensing"></a>
