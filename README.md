@@ -48,7 +48,7 @@ trains and tunes the model using grid search. Then saves the model as pickle fil
     ```
     * To run ML pipeline that trains classifier and saves the model into as pickle file
     ```
-    python models/train_classifier.py data/Disaster_Response.db models/model.pkl>
+    python models/train_classifier.py data/Disaster_Response.db models/model.pkl
     ```
 
 2. Run the following command in the app's directory to run your web app. 
@@ -76,6 +76,6 @@ The fourth screenshot shows number of realted messages vs not related messages:
 ![Web app](images/related.png)
 
 
-## Licensing, Authors, Acknowledgements<a name="licensing"></a>
+## Acknowledgements<a name="licensing"></a>
 
 Must give credit to [Figure Eight](https://www.figure-eight.com/) for the data. 
