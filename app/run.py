@@ -53,6 +53,23 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+
+
+    # categories counts and labels 
+    categories_df = df.iloc[:,4:]
+    categories_counts = categories_df.sum().sort_values(ascending=False)[1:]
+
+    categories_names = list(categories_counts.index)
+
+
+    # create dictionary to map 'related' messages
+    related_dict = {0: 'not_related', 1: 'related'}
+
+    # related and not related counts and labels
+    related_counts = df.related.map(related_dict).value_counts()
+    related_names = list(related_counts.index)
+
+
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
@@ -72,6 +89,42 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=categories_names,
+                    y=categories_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Proportion Message Categories',
+                'yaxis': {
+                    'title': "Proportion"
+                },
+                'xaxis': {
+                    'title': ""
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=related_names,
+                    y=related_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Messages Relevance',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': ""
                 }
             }
         }
